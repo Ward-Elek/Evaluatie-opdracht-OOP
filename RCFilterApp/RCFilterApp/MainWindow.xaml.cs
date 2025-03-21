@@ -1,7 +1,8 @@
-﻿using Graphs;
+﻿using GraphLibrary;
 using RCFilter;
+using System;
+using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Media.Media3D;
 
 namespace RCFilterApp
 {
@@ -12,53 +13,40 @@ namespace RCFilterApp
         public MainWindow()
         {
             InitializeComponent();
-            bodePlot = new BodePlot();
-            bodePlot.SetCanvas(canvasBodePlot, canvasPhasePlot);
         }
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                // Input uitlezen
                 double resistance = double.Parse(txtResistance.Text);
                 double capacitance = double.Parse(txtCapacitance.Text);
                 double vin = double.Parse(txtVin.Text);
+                double frequency = double.Parse(txtFrequency.Text);
 
+                // Berekeningen uitvoeren met RCFilter
                 PassiveRCFilter filter = new PassiveRCFilter(resistance, capacitance);
 
                 double cutoff = filter.CutOff();
-                double vout = filter.Vout(vin, cutoff);
-                double phaseShift = filter.PhaseShift(cutoff);
+                double vout = filter.Vout(vin, frequency);
+                double phaseShift = filter.PhaseShift(frequency);
 
-                // Zorg dat de berekende waarden correct in de labels verschijnen
+                // Resultaten tonen in labels
                 lblVout.Text = $"Vout = {vout:F2} V";
                 lblCutOff.Text = $"Cut-off = {cutoff:F0} Hz";
                 lblPhaseShift.Text = $"Phase shift = {phaseShift:F0}°";
 
-                // Genereer de Bode-plot
-                List<double> frequencies = new List<double>();
-                List<double> magnitudes = new List<double>();
-                List<double> phases = new List<double>();
-
-                for (double f = 10; f <= 100000; f *= 1.2)
-                {
-                    frequencies.Add(f);
-                    double voutF = filter.Vout(vin, f);
-                    magnitudes.Add(20 * Math.Log10(voutF / vin));
-                    phases.Add(filter.PhaseShift(f));
-                }
-
-                BodePlot bodePlot = new BodePlot(resistance, capacitance, vin);
-
+                // BodePlot genereren en tekenen
+                bodePlot = new BodePlot(resistance, capacitance, vin);
+                bodePlot.SetCanvas(canvasBodePlot, canvasPhasePlot);
                 bodePlot.GenerateData();
-                var paths = bodePlot.Draw();
+                bodePlot.Draw();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Fout: {ex.Message}", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
     }
 }
-

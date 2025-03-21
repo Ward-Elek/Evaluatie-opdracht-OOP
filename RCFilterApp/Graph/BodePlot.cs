@@ -1,60 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Shapes;
+using System.Windows.Controls;
 
-
-namespace Graphs
+namespace GraphLibrary
 {
     public class BodePlot
     {
         private Graph gainGraph;
         private Graph phaseGraph;
-
         private double resistance;
         private double capacitance;
         private double vin;
 
-        // Constructor
-        public BodePlot(double resistance, double capacitance, double vin, double width, double height)
+        public BodePlot(double resistance, double capacitance, double vin)
         {
             this.resistance = resistance;
             this.capacitance = capacitance;
             this.vin = vin;
-
-            gainGraph = new Graph("Gain", width, height);
-            phaseGraph = new Graph("Phase", width, height);
+            gainGraph = new Graph();
+            phaseGraph = new Graph();
         }
 
-        // Data genereren en doorgeven
+        public void SetCanvas(Canvas gainCanvas, Canvas phaseCanvas)
+        {
+            gainGraph.SetCanvas(gainCanvas);
+            gainGraph.SetTitle("Gain vs Frequency");
+
+            phaseGraph.SetCanvas(phaseCanvas);
+            phaseGraph.SetTitle("Phase vs Frequency");
+        }
+
         public void GenerateData()
         {
             List<double> frequencies = new List<double>();
-            List<double> gainValues = new List<double>();
-            List<double> phaseValues = new List<double>();
+            List<double> magnitudes = new List<double>();
+            List<double> phases = new List<double>();
 
-            for (double f = 1; f <= 100000; f *= 1.2)
+            double cutoff = 1 / (2 * Math.PI * resistance * capacitance);
+            gainGraph.SetCutoffFrequency(cutoff);
+            phaseGraph.SetCutoffFrequency(cutoff);
+
+            for (double f = 10; f <= 100000; f *= 1.2)
             {
                 frequencies.Add(f);
+                double omega = 2 * Math.PI * f;
+                double denom = Math.Sqrt(1 + Math.Pow(omega * resistance * capacitance, 2));
+                double gain = vin / denom;
+                double gainDb = 20 * Math.Log10(gain / vin);
+                double phase = -Math.Atan(omega * resistance * capacitance) * 180 / Math.PI;
 
-                double gain = 1 / Math.Sqrt(1 + Math.Pow(2 * Math.PI * f * resistance * capacitance, 2));
-                gainValues.Add(20 * Math.Log10(gain));
-
-                double phase = -Math.Atan(2 * Math.PI * f * resistance * capacitance) * (180 / Math.PI);
-                phaseValues.Add(phase);
+                magnitudes.Add(gainDb);
+                phases.Add(phase);
             }
 
-            gainGraph.SetData(frequencies, gainValues);
-            phaseGraph.SetData(frequencies, phaseValues);
+            gainGraph.SetData(frequencies, magnitudes, 600, 250);
+            phaseGraph.SetData(frequencies, phases, 600, 250);
         }
 
-        // Grafieken tekenen
-        public (Path gainPath, Path phasePath) Draw()
+        public void Draw()
         {
-            Path gain = gainGraph.Draw();
-            Path phase = phaseGraph.Draw();
-            return (gain, phase);
+            gainGraph.Draw();
+            phaseGraph.Draw();
         }
     }
 }
