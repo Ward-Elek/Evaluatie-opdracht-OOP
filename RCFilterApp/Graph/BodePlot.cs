@@ -1,48 +1,60 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Shapes;
+
 
 namespace Graphs
 {
     public class BodePlot
     {
-        private Graph magnitudePlot;
-        private Graph phasePlot;
+        private Graph gainGraph;
+        private Graph phaseGraph;
 
-        public BodePlot()
+        private double resistance;
+        private double capacitance;
+        private double vin;
+
+        // Constructor
+        public BodePlot(double resistance, double capacitance, double vin, double width, double height)
         {
-            magnitudePlot = new Graph();
-            phasePlot = new Graph();
+            this.resistance = resistance;
+            this.capacitance = capacitance;
+            this.vin = vin;
+
+            gainGraph = new Graph("Gain", width, height);
+            phaseGraph = new Graph("Phase", width, height);
         }
 
-        public void SetCanvas(Canvas magnitudeCanvas, Canvas phaseCanvas)
+        // Data genereren en doorgeven
+        public void GenerateData()
         {
-            magnitudePlot.Canvas = magnitudeCanvas;
-            phasePlot.Canvas = phaseCanvas;
-        }
+            List<double> frequencies = new List<double>();
+            List<double> gainValues = new List<double>();
+            List<double> phaseValues = new List<double>();
 
-        public void Draw(List<double> frequencies, List<double> magnitudes, List<double> phases)
-        {
-            List<Point> magnitudePoints = new List<Point>();
-            List<Point> phasePoints = new List<Point>();
-
-            double minFreq = Math.Log10(frequencies[0]);
-            double maxFreq = Math.Log10(frequencies[frequencies.Count - 1]);
-
-            for (int i = 0; i < frequencies.Count; i++)
+            for (double f = 1; f <= 100000; f *= 1.2)
             {
-                double x = (Math.Log10(frequencies[i]) - minFreq) / (maxFreq - minFreq) * 600;
-                double yMag = 200 - magnitudes[i] * 5;  // Omgekeerde schaal gefixt
-                double yPhase = 200 - phases[i];
+                frequencies.Add(f);
 
-                magnitudePoints.Add(new Point(x, yMag));
-                phasePoints.Add(new Point(x, yPhase));
+                double gain = 1 / Math.Sqrt(1 + Math.Pow(2 * Math.PI * f * resistance * capacitance, 2));
+                gainValues.Add(20 * Math.Log10(gain));
+
+                double phase = -Math.Atan(2 * Math.PI * f * resistance * capacitance) * (180 / Math.PI);
+                phaseValues.Add(phase);
             }
 
-            magnitudePlot.DataPoints = magnitudePoints;
-            magnitudePlot.Draw();
-            phasePlot.DataPoints = phasePoints;
-            phasePlot.Draw();
+            gainGraph.SetData(frequencies, gainValues);
+            phaseGraph.SetData(frequencies, phaseValues);
         }
 
+        // Grafieken tekenen
+        public (Path gainPath, Path phasePath) Draw()
+        {
+            Path gain = gainGraph.Draw();
+            Path phase = phaseGraph.Draw();
+            return (gain, phase);
+        }
     }
 }

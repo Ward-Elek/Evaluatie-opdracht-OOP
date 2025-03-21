@@ -1,6 +1,7 @@
 ﻿using Graphs;
 using RCFilter;
 using System.Windows;
+using System.Windows.Media.Media3D;
 
 namespace RCFilterApp
 {
@@ -47,7 +48,10 @@ namespace RCFilterApp
                     phases.Add(filter.PhaseShift(f));
                 }
 
-                bodePlot.Draw(frequencies, magnitudes, phases);
+                BodePlot bodePlot = new BodePlot(resistance, capacitance, vin);
+
+                bodePlot.GenerateData();
+                var paths = bodePlot.Draw();
             }
             catch (Exception ex)
             {

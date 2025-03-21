@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Evaluatie opdracht 1 – Dereeper Ward\\RCFilterApp\\Graph\\Graph.csproj",
+      "projectUniqueName": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\Graph.csproj",
       "projectName": "Graph",
-      "projectPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Evaluatie opdracht 1 – Dereeper Ward\\RCFilterApp\\Graph\\Graph.csproj",
+      "projectPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\Graph.csproj",
       "packagesPath": "C:\\Users\\wardd\\.nuget\\packages\\",
-      "outputPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Evaluatie opdracht 1 – Dereeper Ward\\RCFilterApp\\Graph\\obj\\",
+      "outputPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

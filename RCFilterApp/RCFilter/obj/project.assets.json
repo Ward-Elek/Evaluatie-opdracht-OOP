@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Evaluatie opdracht 1 – Dereeper Ward\\RCFilterApp\\RCFilter\\RCFilter.csproj",
+      "projectUniqueName": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\RCFilter.csproj",
       "projectName": "RCFilter",
-      "projectPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Evaluatie opdracht 1 – Dereeper Ward\\RCFilterApp\\RCFilter\\RCFilter.csproj",
+      "projectPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\RCFilter.csproj",
       "packagesPath": "C:\\Users\\wardd\\.nuget\\packages\\",
-      "outputPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Evaluatie opdracht 1 – Dereeper Ward\\RCFilterApp\\RCFilter\\obj\\",
+      "outputPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

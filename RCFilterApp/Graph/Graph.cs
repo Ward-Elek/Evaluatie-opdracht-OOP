@@ -1,75 +1,73 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
+
 
 namespace Graphs
 {
     public class Graph
     {
-        private Canvas canvas;
+        // Attributen
         private string title;
         private List<Point> dataPoints;
+        private double width;
+        private double height;
 
         // Constructor
-        public Graph()
+        public Graph(string title, double width, double height)
         {
-            dataPoints = new List<Point>();
+            this.title = title;
+            this.width = width;
+            this.height = height;
+            this.dataPoints = new List<Point>();
         }
 
-        // Properties
-        public Canvas Canvas
+        // Dataset instellen
+        public void SetData(List<double> frequencies, List<double> values, bool isLogX = true)
         {
-            get { return canvas; }
-            set { canvas = value; }
+            dataPoints.Clear();
+            double maxFreq = frequencies[^1];
+            double minFreq = frequencies[0];
+
+            for (int i = 0; i < frequencies.Count; i++)
+            {
+                double x = isLogX
+                    ? Math.Log10(frequencies[i]) / Math.Log10(maxFreq) * width
+                    : (frequencies[i] - minFreq) / (maxFreq - minFreq) * width;
+
+                double y = height / 2 - values[i] * 2; // Ruimtelijke scaling
+                dataPoints.Add(new Point(x, y));
+            }
         }
 
-        public string Title
+        // Grafiek tekenen
+        public Path Draw()
         {
-            get { return title; }
-            set { title = value; }
-        }
-
-        public List<Point> DataPoints
-        {
-            get { return dataPoints; }
-            set { dataPoints = value; }
-        }
-
-        // Methode om de grafiek te tekenen
-        public void Draw()
-        {
-            if (canvas == null || dataPoints.Count == 0) return;
-            canvas.Children.Clear();
-
-            double minX = double.MaxValue, maxX = double.MinValue;
-            double minY = double.MaxValue, maxY = double.MinValue;
-
-            // Zoek min en max waarden van X en Y
+            PolyLineSegment segment = new PolyLineSegment();
             foreach (var point in dataPoints)
             {
-                if (point.X < minX) minX = point.X;
-                if (point.X > maxX) maxX = point.X;
-                if (point.Y < minY) minY = point.Y;
-                if (point.Y > maxY) maxY = point.Y;
+                segment.Points.Add(point);
             }
 
-            double scaleX = (canvas.Width - 20) / (maxX - minX);
-            double scaleY = (canvas.Height - 20) / (maxY - minY);
-
-            Polyline polyline = new Polyline { Stroke = Brushes.Blue, StrokeThickness = 2 };
-            PointCollection points = new PointCollection();
-
-            foreach (var point in dataPoints)
+            PathFigure figure = new PathFigure
             {
-                double x = 10 + (point.X - minX) * scaleX;
-                double y = canvas.Height - 10 - (point.Y - minY) * scaleY;
-                points.Add(new Point(x, y));
-            }
+                StartPoint = dataPoints.Count > 0 ? dataPoints[0] : new Point(0, 0),
+                Segments = new PathSegmentCollection { segment }
+            };
 
-            polyline.Points = points;
-            canvas.Children.Add(polyline);
+            PathGeometry geometry = new PathGeometry();
+            geometry.Figures.Add(figure);
+
+            Path path = new Path
+            {
+                Stroke = Brushes.Blue,
+                StrokeThickness = 2,
+                Data = geometry
+            };
+
+            return path;
         }
-
     }
 }

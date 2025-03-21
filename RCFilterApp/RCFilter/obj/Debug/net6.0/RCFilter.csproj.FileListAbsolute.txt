@@ -9,3 +9,15 @@ C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – De
 C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\RCFilter\obj\Debug\net6.0\refint\RCFilter.dll
 C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.pdb
 C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\RCFilter\obj\Debug\net6.0\ref\RCFilter.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\bin\Debug\net6.0\RCFilter.deps.json
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\bin\Debug\net6.0\RCFilter.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\bin\Debug\net6.0\RCFilter.pdb
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.AssemblyInfoInputs.cache
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.AssemblyInfo.cs
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.csproj.CoreCompileInputs.cache
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.sourcelink.json
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\refint\RCFilter.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\RCFilter.pdb
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\RCFilter\obj\Debug\net6.0\ref\RCFilter.dll
