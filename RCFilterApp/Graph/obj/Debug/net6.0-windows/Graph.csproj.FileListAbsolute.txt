@@ -1,0 +1,11 @@
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.GeneratedMSBuildEditorConfig.editorconfig
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.AssemblyInfoInputs.cache
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.AssemblyInfo.cs
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.csproj.CoreCompileInputs.cache
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\bin\Debug\net6.0-windows\Graph.deps.json
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\bin\Debug\net6.0-windows\Graph.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\bin\Debug\net6.0-windows\Graph.pdb
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\refint\Graph.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.pdb
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Evaluatie opdracht 1 – Dereeper Ward\RCFilterApp\Graph\obj\Debug\net6.0-windows\ref\Graph.dll

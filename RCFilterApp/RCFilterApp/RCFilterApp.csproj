@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Ludwig_von_Draak.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Graph\Graph.csproj" />
+    <ProjectReference Include="..\RCFilter\RCFilter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ludwig_von_Draak.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
