@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCFilter", "RCFilter\RCFilt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{39F5E1A1-879C-4545-A5D4-A3252773723E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestRCFilter", "XUnitTestRCFilter\XUnitTestRCFilter.csproj", "{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{39F5E1A1-879C-4545-A5D4-A3252773723E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F5E1A1-879C-4545-A5D4-A3252773723E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F5E1A1-879C-4545-A5D4-A3252773723E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

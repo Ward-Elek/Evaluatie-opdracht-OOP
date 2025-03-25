@@ -25,9 +25,13 @@ namespace GraphLibrary
         {
             gainGraph.SetCanvas(gainCanvas);
             gainGraph.SetTitle("Gain vs Frequency");
+            gainGraph.XAxisTitle = "Frequency [Hz]";
+            gainGraph.YAxisTitle = "Gain [dB]";
 
             phaseGraph.SetCanvas(phaseCanvas);
             phaseGraph.SetTitle("Phase vs Frequency");
+            phaseGraph.XAxisTitle = "Frequency [Hz]";
+            phaseGraph.YAxisTitle = "Phase Shift [°]";
         }
 
         public void GenerateData()

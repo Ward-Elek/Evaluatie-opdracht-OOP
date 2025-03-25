@@ -36,12 +36,19 @@
                     <TextBlock Name="lblPhaseShift" Text="Phase shift = " Foreground="White" FontSize="14"/>
                 </StackPanel>
             </Border>
-            <Image Source="/Ludwig_von_Draak.png" 
-                   Width="268" Height="248" 
-                   Stretch="Uniform" 
-                   />
+            <Image Source="/Ludwig_von_Draak.png" Width="284" Height="286" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <!-- Horizontale spiegeling -->
+                        <TranslateTransform X="-30"/>
+                        <!-- verschuift afbeelding naar links -->
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
 
-            <!-- Afbeelding onder de resultaten -->
+
+
         </StackPanel>
 
 

@@ -15,6 +15,10 @@ namespace GraphLibrary
         private double cutoffFrequency;
         private bool logScale;
 
+        // Dynamische as-titels
+        public string XAxisTitle { get; set; } = "Frequency [Hz]";
+        public string YAxisTitle { get; set; } = "Value";
+
         public Graph()
         {
             points = new List<Point>();
@@ -53,10 +57,10 @@ namespace GraphLibrary
             for (int i = 0; i < frequencies.Count; i++)
             {
                 double x = logScale
-                    ? Math.Log10(frequencies[i]) / Math.Log10(maxFreq) * width
-                    : (frequencies[i] - minFreq) / (maxFreq - minFreq) * width;
+                    ? 60 + Math.Log10(frequencies[i] / minFreq) / Math.Log10(maxFreq / minFreq) * (width - 80)
+                    : 60 + (frequencies[i] - minFreq) / (maxFreq - minFreq) * (width - 80);
 
-                double y = height - ((values[i] - minValue) / (maxValue - minValue)) * height;
+                double y = 20 + (height - 60) - ((values[i] - minValue) / (maxValue - minValue)) * (height - 60);
                 points.Add(new Point(x, y));
             }
         }
@@ -83,12 +87,16 @@ namespace GraphLibrary
 
         private void DrawAxes()
         {
+            double marginLeft = 60;
+            double marginBottom = 40;
+            double marginTop = 20;
+
             Line xAxis = new Line
             {
-                X1 = 0,
-                X2 = canvas.Width,
-                Y1 = canvas.Height - 20,
-                Y2 = canvas.Height - 20,
+                X1 = marginLeft,
+                X2 = canvas.Width - 20,
+                Y1 = canvas.Height - marginBottom,
+                Y2 = canvas.Height - marginBottom,
                 Stroke = Brushes.Black,
                 StrokeThickness = 1
             };
@@ -96,30 +104,54 @@ namespace GraphLibrary
 
             Line yAxis = new Line
             {
-                X1 = 20,
-                X2 = 20,
-                Y1 = 0,
-                Y2 = canvas.Height,
+                X1 = marginLeft,
+                X2 = marginLeft,
+                Y1 = marginTop,
+                Y2 = canvas.Height - marginBottom,
                 Stroke = Brushes.Black,
                 StrokeThickness = 1
             };
             canvas.Children.Add(yAxis);
+
+            // X-as titel toevoegen
+            TextBlock xTitle = new TextBlock
+            {
+                Text = XAxisTitle,
+                Foreground = Brushes.Black,
+                FontWeight = FontWeights.Bold
+            };
+            Canvas.SetLeft(xTitle, marginLeft + (canvas.Width - marginLeft) / 2 - 40);
+            Canvas.SetTop(xTitle, canvas.Height - marginBottom + 10);
+            canvas.Children.Add(xTitle);
+
+            // Y-as titel toevoegen
+            TextBlock yTitle = new TextBlock
+            {
+                Text = YAxisTitle,
+                Foreground = Brushes.Black,
+                FontWeight = FontWeights.Bold,
+                LayoutTransform = new RotateTransform(-90)
+            };
+            Canvas.SetLeft(yTitle, 10);
+            Canvas.SetTop(yTitle, marginTop + (canvas.Height - marginTop - marginBottom) / 2 + 20);
+            canvas.Children.Add(yTitle);
         }
 
         private void DrawCutoffMarker()
         {
             if (cutoffFrequency <= 0) return;
 
+            double marginLeft = 60;
             double cutoffX = logScale
-                ? Math.Log10(cutoffFrequency) / Math.Log10(100000) * canvas.Width
-                : (cutoffFrequency - 10) / (100000 - 10) * canvas.Width;
+                ? marginLeft + Math.Log10(cutoffFrequency / 10) / Math.Log10(100000 / 10) * (canvas.Width - 80)
+                : marginLeft + (cutoffFrequency - 10) / (100000 - 10) * (canvas.Width - 80);
 
             Line cutoffLine = new Line
             {
                 X1 = cutoffX,
                 X2 = cutoffX,
-                Y1 = 0,
-                Y2 = canvas.Height,
+                Y1 = 20,
+                Y2 = canvas.Height - 40,
                 Stroke = Brushes.Red,
                 StrokeThickness = 2,
                 StrokeDashArray = new DoubleCollection { 4, 4 }
