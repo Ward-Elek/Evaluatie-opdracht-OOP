@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Graph/1.0.0": {
+        "dependencies": {
+          "RCFilter": "1.0.0"
+        },
         "runtime": {
           "Graph.dll": {}
+        }
+      },
+      "RCFilter/1.0.0": {
+        "runtime": {
+          "RCFilter.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Graph/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RCFilter/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -21,3 +21,7 @@ C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdrac
 C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\obj\Debug\net6.0-windows\refint\Graph.dll
 C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.pdb
 C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\obj\Debug\net6.0-windows\ref\Graph.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\bin\Debug\net6.0-windows\RCFilter.dll
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\bin\Debug\net6.0-windows\RCFilter.pdb
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.csproj.AssemblyReference.cache
+C:\Vives\Sem2\Programming\Oject Oriented Programming\Eval 1 Git\Evaluatie-opdracht-OOP\RCFilterApp\Graph\obj\Debug\net6.0-windows\Graph.csproj.Up2Date

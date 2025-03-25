@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\RCFilter.csproj": {
+                "projectPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\RCFilter.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

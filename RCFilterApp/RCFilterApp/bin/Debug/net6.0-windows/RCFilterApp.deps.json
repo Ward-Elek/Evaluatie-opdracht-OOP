@@ -16,6 +16,9 @@
         }
       },
       "Graph/1.0.0": {
+        "dependencies": {
+          "RCFilter": "1.0.0"
+        },
         "runtime": {
           "Graph.dll": {
             "assemblyVersion": "1.0.0",

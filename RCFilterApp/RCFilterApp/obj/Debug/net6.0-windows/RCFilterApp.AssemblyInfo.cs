@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RCFilterApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ffcd4b2b567b7ae7a09b71a5bddda14f2f55244")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bdffcbd760891145c8884b8c92595461b1b96a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("RCFilterApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RCFilterApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

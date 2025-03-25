@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "RCFilter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RCFilter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RCFilter.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "RCFilter/1.0.0": {
+      "type": "project",
+      "path": "../RCFilter/RCFilter.csproj",
+      "msbuildProject": "../RCFilter/RCFilter.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "RCFilter >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\wardd\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\RCFilter.csproj": {
+              "projectPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\RCFilter.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
