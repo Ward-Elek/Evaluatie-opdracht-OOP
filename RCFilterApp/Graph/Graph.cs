@@ -91,6 +91,7 @@ namespace GraphLibrary
             double marginBottom = 40;
             double marginTop = 20;
 
+            // X-as tekenen
             Line xAxis = new Line
             {
                 X1 = marginLeft,
@@ -102,6 +103,7 @@ namespace GraphLibrary
             };
             canvas.Children.Add(xAxis);
 
+            // Y-as tekenen
             Line yAxis = new Line
             {
                 X1 = marginLeft,
@@ -113,18 +115,24 @@ namespace GraphLibrary
             };
             canvas.Children.Add(yAxis);
 
-            // X-as titel toevoegen
+            // X-as titel aanmaken
             TextBlock xTitle = new TextBlock
             {
                 Text = XAxisTitle,
                 Foreground = Brushes.Black,
                 FontWeight = FontWeights.Bold
             };
-            Canvas.SetLeft(xTitle, marginLeft + (canvas.Width - marginLeft) / 2 - 40);
+
+            // Werkelijke breedte meten
+            xTitle.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            double actualXTitleWidth = xTitle.DesiredSize.Width;
+
+            // X-as titel precies gecentreerd plaatsen onder de X-as
+            Canvas.SetLeft(xTitle, marginLeft + (canvas.Width - marginLeft - 20) / 2 - actualXTitleWidth / 2);
             Canvas.SetTop(xTitle, canvas.Height - marginBottom + 10);
             canvas.Children.Add(xTitle);
 
-            // Y-as titel toevoegen
+            // Y-as titel aanmaken (geroteerd)
             TextBlock yTitle = new TextBlock
             {
                 Text = YAxisTitle,
@@ -132,10 +140,20 @@ namespace GraphLibrary
                 FontWeight = FontWeights.Bold,
                 LayoutTransform = new RotateTransform(-90)
             };
-            Canvas.SetLeft(yTitle, 10);
-            Canvas.SetTop(yTitle, marginTop + (canvas.Height - marginTop - marginBottom) / 2 + 20);
+
+            // Werkelijke grootte van geroteerde tekst meten
+            yTitle.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            double actualYTitleWidth = yTitle.DesiredSize.Width;
+            double actualYTitleHeight = yTitle.DesiredSize.Height;
+
+            // Y-as titel precies gecentreerd plaatsen naast de Y-as
+            Canvas.SetLeft(yTitle, marginLeft - actualYTitleWidth - 5); 
+            Canvas.SetTop(yTitle, marginTop + (canvas.Height - marginTop - marginBottom) / 2 - actualYTitleHeight / 2);
             canvas.Children.Add(yTitle);
         }
+
+
+
 
         private void DrawCutoffMarker()
         {
