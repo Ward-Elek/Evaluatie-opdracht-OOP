@@ -147,7 +147,7 @@ namespace GraphLibrary
             double actualYTitleHeight = yTitle.DesiredSize.Height;
 
             // Y-as titel precies gecentreerd plaatsen naast de Y-as
-            Canvas.SetLeft(yTitle, marginLeft - actualYTitleWidth - 5); 
+            Canvas.SetLeft(yTitle, marginLeft - actualYTitleWidth - 5);
             Canvas.SetTop(yTitle, marginTop + (canvas.Height - marginTop - marginBottom) / 2 - actualYTitleHeight / 2);
             canvas.Children.Add(yTitle);
         }
