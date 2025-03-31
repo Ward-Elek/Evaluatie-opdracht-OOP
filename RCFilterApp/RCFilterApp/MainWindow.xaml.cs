@@ -25,6 +25,9 @@ namespace RCFilterApp
                 double vin = double.Parse(txtVin.Text);
                 double frequency = double.Parse(txtFrequency.Text);
 
+                // Bepalen of logaritmische schaal is aangevinkt
+                bool logScale = chkLogScale.IsChecked == true;
+
                 // Berekeningen uitvoeren met RCFilter
                 PassiveRCFilter filter = new PassiveRCFilter(resistance, capacitance);
 
@@ -37,8 +40,8 @@ namespace RCFilterApp
                 lblCutOff.Text = $"Cut-off = {cutoff:F0} Hz";
                 lblPhaseShift.Text = $"Phase shift = {phaseShift:F0}°";
 
-                // BodePlot genereren en tekenen
-                bodePlot = new BodePlot(resistance, capacitance, vin);
+                // BodePlot genereren en tekenen met log/lineaire schaal
+                bodePlot = new BodePlot(resistance, capacitance, vin, logScale);
                 bodePlot.SetCanvas(canvasBodePlot, canvasPhasePlot);
                 bodePlot.GenerateData();
                 bodePlot.Draw();

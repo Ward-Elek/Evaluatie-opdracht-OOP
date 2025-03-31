@@ -21,7 +21,12 @@
 
             <TextBlock Text="Frequency (Hz)" Foreground="White" FontWeight="Bold"/>
             <TextBox Name="txtFrequency" Background="White" Margin="0,2,0,10"/>
-
+            <CheckBox Name="chkLogScale"
+             Content="Gebruik logaritmische X-as"
+             Foreground="White"
+             Margin="0,0,0,10"
+            IsChecked="True"/>
+            
             <Button Name="btnCalculate" Content="Calculate"
                     Background="Black" Foreground="White" 
                     FontWeight="Bold" Height="30" Width="100"

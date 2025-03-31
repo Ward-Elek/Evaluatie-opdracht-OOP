@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\graph\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|solutionrelative:graph\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\graph\\bodeplot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|solutionrelative:graph\\bodeplot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilterapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|solutionrelative:rcfilterapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilterapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|solutionrelative:rcfilterapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC38825F-477D-463D-90B1-D1C5859928B5}|RCFilter\\RCFilter.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilter\\passivercfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC38825F-477D-463D-90B1-D1C5859928B5}|RCFilter\\RCFilter.csproj|solutionrelative:rcfilter\\passivercfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,28 +27,12 @@
       "RelativeMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|solutionrelative:rcfilterapp\\rcfilterapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\graph\\bodeplot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|solutionrelative:graph\\bodeplot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}|XUnitTestRCFilter\\XUnitTestRCFilter.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\xunittestrcfilter\\rcfiltertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66A4F6A5-CF4F-458B-A7C5-F04728F9243B}|XUnitTestRCFilter\\XUnitTestRCFilter.csproj|solutionrelative:xunittestrcfilter\\rcfiltertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\graph\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39F5E1A1-879C-4545-A5D4-A3252773723E}|Graph\\Graph.csproj|solutionrelative:graph\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilterapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|solutionrelative:rcfilterapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilterapp\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|solutionrelative:rcfilterapp\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilterapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|solutionrelative:rcfilterapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4859A7F-B660-4699-9095-3FFB05CF8903}|RCFilterApp\\RCFilterApp.csproj|c:\\vives\\sem2\\programming\\oject oriented programming\\eval 1 git\\evaluatie-opdracht-oop\\rcfilterapp\\rcfilterapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,37 +46,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RCFilterApp",
+              "DocumentIndex": 5,
+              "Title": "RCFilterApp.csproj",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\RCFilterApp.csproj",
               "RelativeDocumentMoniker": "RCFilterApp\\RCFilterApp.csproj",
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\RCFilterApp.csproj",
               "RelativeToolTip": "RCFilterApp\\RCFilterApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-31T10:22:11.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:22:11.454Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PassiveRCFilter.cs",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\PassiveRCFilter.cs",
               "RelativeDocumentMoniker": "RCFilter\\PassiveRCFilter.cs",
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilter\\PassiveRCFilter.cs",
               "RelativeToolTip": "RCFilter\\PassiveRCFilter.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwCcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T13:25:45.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "RCFiltertest.cs",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\XUnitTestRCFilter\\RCFiltertest.cs",
               "RelativeDocumentMoniker": "XUnitTestRCFilter\\RCFiltertest.cs",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "XUnitTestRCFilter\\RCFiltertest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T13:02:28.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T13:02:28.014Z"
             },
             {
               "$type": "Document",
@@ -96,11 +94,12 @@
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\App.xaml",
               "RelativeToolTip": "RCFilterApp\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-21T22:59:38.581Z"
+              "WhenOpened": "2025-03-21T22:59:38.581Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "RCFilterApp\\AssemblyInfo.cs",
@@ -112,52 +111,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "BodePlot.cs",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\BodePlot.cs",
               "RelativeDocumentMoniker": "Graph\\BodePlot.cs",
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\BodePlot.cs",
               "RelativeToolTip": "Graph\\BodePlot.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwEIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T11:10:38.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Graph.cs",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\Graph.cs",
               "RelativeDocumentMoniker": "Graph\\Graph.cs",
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\Graph\\Graph.cs",
               "RelativeToolTip": "Graph\\Graph.cs",
-              "ViewState": "AgIAALIAAAAAAAAAAAAAAL4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAADwv1MAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T11:10:19.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "RCFilterApp\\MainWindow.xaml",
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\MainWindow.xaml",
               "RelativeToolTip": "RCFilterApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-18T14:52:25.488Z"
+              "WhenOpened": "2025-03-18T14:52:25.488Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "RCFilterApp\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Vives\\Sem2\\Programming\\Oject Oriented Programming\\Eval 1 Git\\Evaluatie-opdracht-OOP\\RCFilterApp\\RCFilterApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "RCFilterApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAgwDMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T14:52:23.684Z"
+              "WhenOpened": "2025-03-18T14:52:23.684Z",
+              "EditorCaption": ""
             }
           ]
         }

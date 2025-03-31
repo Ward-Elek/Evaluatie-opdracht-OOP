@@ -11,12 +11,14 @@ namespace GraphLibrary
         private Graph phaseGraph;
         private PassiveRCFilter rcFilter;
         private double vin;
+        private bool logScale;
 
-        public BodePlot(double resistance, double capacitance, double vin)
+        public BodePlot(double resistance, double capacitance, double vin, bool logScale = true)
         {
             // Maak RCFilter instantie
             rcFilter = new PassiveRCFilter(resistance, capacitance);
             this.vin = vin;
+            this.logScale = logScale;
 
             // Maak grafieken voor Gain en Phase
             gainGraph = new Graph();
@@ -51,14 +53,14 @@ namespace GraphLibrary
             phaseGraph.SetCutoffFrequency(cutoff);
 
             // Bereken waarden voor frequentiebereik
-            for (double f = 10; f <= 100000; f *= 1.2)
+            for (double f = 1; f <= 100000; f *= 1.2)
             {
                 frequencies.Add(f);
 
                 // Bereken uitgangsspanning via RCFilter
                 double vout = rcFilter.Vout(vin, f);
-                // Bereken gain in dB
-                double gainDb = 20 * Math.Log10(vout / vin);
+                // Vermijd NaN of negatieve oneindige waarden
+                double gainDb = double.IsNaN(vout) || vout <= 0 ? -100 : 20 * Math.Log10(vout / vin);
                 magnitudes.Add(gainDb);
 
                 // Bereken faseverschuiving via RCFilter en spiegel deze
@@ -66,9 +68,9 @@ namespace GraphLibrary
                 phases.Add(phase);
             }
 
-            // Stel gegevens in voor grafieken
-            gainGraph.SetData(frequencies, magnitudes, 600, 250);
-            phaseGraph.SetData(frequencies, phases, 600, 250);
+            // Stel gegevens in voor grafieken (gebruik breedte en hoogte zoals in UI voorzien)
+            gainGraph.SetData(frequencies, magnitudes, 600, 250, logScale);
+            phaseGraph.SetData(frequencies, phases, 600, 250, logScale);
         }
 
         public void Draw()
