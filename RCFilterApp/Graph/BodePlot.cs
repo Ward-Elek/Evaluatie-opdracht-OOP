@@ -64,8 +64,8 @@ namespace GraphLibrary
                 magnitudes.Add(gainDb);
 
                 // Bereken faseverschuiving via RCFilter en spiegel deze
-                double phase = -rcFilter.PhaseShift(f);
-                phases.Add(phase);
+                double phase = rcFilter.PhaseShift(f);
+                phases.Add(phase-90);
             }
 
             // Stel gegevens in voor grafieken (gebruik breedte en hoogte zoals in UI voorzien)

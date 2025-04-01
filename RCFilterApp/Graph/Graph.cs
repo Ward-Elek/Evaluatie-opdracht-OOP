@@ -46,8 +46,17 @@ namespace GraphLibrary
             this.logScale = logScale;
             maxFreq = frequencies.Max();
             minFreq = frequencies.Min();
-            maxValue = values.Max();
-            minValue = values.Min();
+
+            if (YAxisTitle.ToLower().Contains("phase"))
+            {
+                minValue = -90;
+                maxValue = 0;
+            }
+            else
+            {
+                maxValue = values.Max();
+                minValue = values.Min();
+            }
 
             for (int i = 0; i < frequencies.Count; i++)
             {
@@ -81,7 +90,6 @@ namespace GraphLibrary
             DrawAxes();
             DrawCutoffMarker();
             DrawLabels();
-
         }
 
         private void DrawAxes()
@@ -111,32 +119,6 @@ namespace GraphLibrary
                 StrokeThickness = 1
             };
             canvas.Children.Add(yAxis);
-
-            TextBlock xTitle = new TextBlock
-            {
-                Text = XAxisTitle,
-                Foreground = Brushes.Black,
-                FontWeight = FontWeights.Bold
-            };
-            xTitle.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-            double actualXTitleWidth = xTitle.DesiredSize.Width;
-            Canvas.SetLeft(xTitle, marginLeft + (canvas.Width - marginLeft - 20) / 2 - actualXTitleWidth / 2);
-            Canvas.SetTop(xTitle, canvas.Height - marginBottom + 10);
-            canvas.Children.Add(xTitle);
-
-            TextBlock yTitle = new TextBlock
-            {
-                Text = YAxisTitle,
-                Foreground = Brushes.Black,
-                FontWeight = FontWeights.Bold,
-                LayoutTransform = new RotateTransform(-90)
-            };
-            yTitle.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-            double actualYTitleWidth = yTitle.DesiredSize.Width;
-            double actualYTitleHeight = yTitle.DesiredSize.Height;
-            Canvas.SetLeft(yTitle, marginLeft - actualYTitleWidth - 5);
-            Canvas.SetTop(yTitle, marginTop + (canvas.Height - marginTop - marginBottom) / 2 - actualYTitleHeight / 2);
-            canvas.Children.Add(yTitle);
         }
 
         private void DrawCutoffMarker()
@@ -219,7 +201,6 @@ namespace GraphLibrary
             double graphWidth = canvas.Width - marginLeft - 20;
             double graphHeight = canvas.Height - marginBottom - marginTop;
 
-            // --- X-as labels (log of lineair)
             if (logScale)
             {
                 double[] logFreqs = { 1, 10, 100, 1000, 10000, 100000 };
@@ -260,15 +241,13 @@ namespace GraphLibrary
                 }
             }
 
-            // --- Y-as labels
             double yMin = minValue;
             double yMax = maxValue;
 
-            // Als het om een faseshift gaat: geforceerd 0–90°
             if (YAxisTitle.ToLower().Contains("phase"))
             {
-                yMin = 0;
-                yMax = 90;
+                yMin = -90;
+                yMax = 0;
             }
 
             for (int i = 0; i <= 10; i++)
@@ -282,12 +261,42 @@ namespace GraphLibrary
                     Foreground = Brushes.Black,
                     FontSize = 10
                 };
-                Canvas.SetLeft(label, marginLeft - 35);
+                Canvas.SetLeft(label, marginLeft - 30);
                 Canvas.SetTop(label, y - 6);
                 canvas.Children.Add(label);
             }
+
+            // Zet Y-as titel NA labels
+            TextBlock yTitle = new TextBlock
+            {
+                Text = YAxisTitle,
+                Foreground = Brushes.Black,
+                FontWeight = FontWeights.Bold,
+                LayoutTransform = new RotateTransform(-90)
+            };
+            yTitle.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            double yTitleWidth = yTitle.DesiredSize.Width;
+            double yTitleHeight = yTitle.DesiredSize.Height;
+            Canvas.SetLeft(yTitle, marginLeft - 50);
+            Canvas.SetTop(yTitle, marginTop + (graphHeight) / 2 - yTitleHeight / 2);
+            canvas.Children.Add(yTitle);
+
+            // Zet X-as titel NA frequentielabels
+            TextBlock xTitle = new TextBlock
+            {
+                Text = XAxisTitle,
+                Foreground = Brushes.Black,
+                FontWeight = FontWeights.Bold
+            };
+
+            // Midden onderaan de grafiek zetten
+            xTitle.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            double xTitleWidth = xTitle.DesiredSize.Width;
+            Canvas.SetLeft(xTitle, marginLeft + graphWidth / 2 - xTitleWidth / 2);
+            Canvas.SetTop(xTitle, canvas.Height - marginBottom + 20); // iets lager dan de freq-labels
+
+            canvas.Children.Add(xTitle);
+
         }
-
-
     }
 }

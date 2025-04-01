@@ -47,7 +47,7 @@
         {
             double omega = 2 * Math.PI * frequency;
             double reactance = 1 / (omega * capacitance);
-            return -Math.Atan(reactance / resistance) * (180 / Math.PI);
+            return Math.Atan(reactance / resistance) * (180 / Math.PI);
         }
     }
 }
