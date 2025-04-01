@@ -38,7 +38,7 @@ namespace RCFilterApp
                 // Resultaten tonen in labels
                 lblVout.Text = $"Vout = {vout:F2} V";
                 lblCutOff.Text = $"Cut-off = {cutoff:F0} Hz";
-                lblPhaseShift.Text = $"Phase shift = -{phaseShift:F0}°";
+                lblPhaseShift.Text = $"Phase shift = {-90 +phaseShift:F0}°";
 
                 // BodePlot genereren en tekenen met log/lineaire schaal
                 bodePlot = new BodePlot(resistance, capacitance, vin, logScale);

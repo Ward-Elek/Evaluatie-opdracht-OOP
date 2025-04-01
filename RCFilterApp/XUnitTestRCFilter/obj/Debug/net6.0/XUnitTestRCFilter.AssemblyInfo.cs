@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XUnitTestRCFilter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff5b8a5154ac2d7101e381010e0f14ef64fa6be7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49ea4475c524409afe68941c2c0223868f9b5130")]
 [assembly: System.Reflection.AssemblyProductAttribute("XUnitTestRCFilter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XUnitTestRCFilter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
